@@ -284,6 +284,15 @@ const MapComponent = ({ onEcosystemSelect, activeLayers, ecosystemStats, searchT
             map.current.getCanvas().style.cursor = '';
         });
 
+        // Al desmontar hay que destruir el mapa: remove() libera el contexto
+        // WebGL y da de baja los listeners registrados mas arriba.
+        return () => {
+            if (map.current) {
+                map.current.remove();
+                map.current = null;
+            }
+        };
+
     }, []);
 
     // Effect: Visibility Updates
