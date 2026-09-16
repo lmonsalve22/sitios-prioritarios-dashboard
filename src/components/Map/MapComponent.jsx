@@ -103,7 +103,7 @@ const MapComponent = ({ onEcosystemSelect, activeLayers, ecosystemStats, searchT
                                 '#fbbf24', // hover color (amber)
                                 '#94a3b8'  // normal color (gray)
                             ],
-                            'fill-opacity': 0.6,
+                            'fill-opacity': 0.8,
                             'fill-outline-color': '#ffffff'
                         }
                     },
@@ -114,8 +114,8 @@ const MapComponent = ({ onEcosystemSelect, activeLayers, ecosystemStats, searchT
                         'source-layer': 'Ecosistemas',
                         paint: {
                             'line-color': '#ffffff',
-                            'line-width': 0.5,
-                            'line-opacity': 0.1
+                            'line-width': 1,
+                            'line-opacity': 0.5
                         }
                     },
                     // --- Ecosystems (Integrated/Cruce) ---
@@ -150,7 +150,7 @@ const MapComponent = ({ onEcosystemSelect, activeLayers, ecosystemStats, searchT
                         source: 'areas_protegidas',
                         'source-layer': 'Areas_Protegidas',
                         layout: { visibility: 'visible' },
-                        paint: { 'fill-color': '#3b82f6', 'fill-opacity': 0.4 }
+                        paint: { 'fill-color': '#3b82f6', 'fill-opacity': 0.6 }
                     },
                     {
                         id: 'areas_protegidas-line',
@@ -169,7 +169,7 @@ const MapComponent = ({ onEcosystemSelect, activeLayers, ecosystemStats, searchT
                         source: 'sitios_prioritarios',
                         'source-layer': 'sitios_prior_integrados',
                         layout: { visibility: 'visible' },
-                        paint: { 'fill-color': '#a855f7', 'fill-opacity': 0.4 }
+                        paint: { 'fill-color': '#a855f7', 'fill-opacity': 0.6 }
                     },
                     {
                         id: 'sitios_prioritarios-line',
